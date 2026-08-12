@@ -72,18 +72,6 @@ export const DeliverablesSection: React.FC<Props> = ({ onOpenCheckout }) => {
           })}
         </div>
 
-        {/* CTA Container */}
-        <div className="text-center pt-2">
-          <button
-            onClick={onOpenCheckout}
-            className="bg-rose-600 hover:bg-rose-700 text-white font-bold text-xs sm:text-sm uppercase tracking-widest px-8 py-4 rounded-sm shadow-2xl transition-all active:scale-95 inline-flex items-center gap-2 cursor-pointer border border-rose-500/30"
-          >
-            <Sparkles className="w-4 h-4 fill-white" />
-            <span>Garantir Minha Consulta Individual por R$ 89,90</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
-        </div>
-
       </div>
     </section>
   );

@@ -127,24 +127,49 @@ export const HeroSection: React.FC<Props> = ({ onOpenCheckout, onDeclineClick })
 
           </div>
 
-          {/* Primary CTA Button */}
-          <div className="mt-8 text-center space-y-3 pt-4 border-t border-white/5">
-            <button
-              onClick={onOpenCheckout}
-              className="w-full sm:w-auto min-w-[320px] sm:min-w-[440px] bg-rose-600 hover:bg-rose-700 text-white font-bold text-base sm:text-lg py-4 px-8 rounded-sm shadow-xl shadow-rose-950/40 uppercase tracking-widest transition-all transform active:scale-95 flex items-center justify-center gap-3 border border-rose-500/30 cursor-pointer mx-auto"
-            >
-              <span>SIM! QUERO MINHA CONSULTA POR R$ 89,90</span>
-              <ArrowRight className="w-5 h-5 shrink-0" />
-            </button>
-
-            {/* Subtle Decline Link */}
-            <div>
+          {/* Single Official Kiwify Upsell Container */}
+          <div className="mt-8 text-center pt-6 border-t border-white/10">
+            <div style={{ textAlign: 'center' }} id="kiwify-upsell-vOKFrFs" data-upsell-url="" data-downsell-url="">
               <button
-                onClick={onDeclineClick}
-                className="text-xs text-slate-500 hover:text-slate-400 underline transition-colors cursor-pointer pt-2 uppercase tracking-wider"
+                id="kiwify-upsell-trigger-vOKFrFs"
+                onClick={onOpenCheckout}
+                style={{
+                  backgroundColor: '#27AF60',
+                  padding: '16px 28px',
+                  cursor: 'pointer',
+                  color: '#FFFFFF',
+                  fontWeight: 700,
+                  borderRadius: '4px',
+                  border: '1px solid #27AF60',
+                  fontSize: '20px',
+                  width: '100%',
+                  maxWidth: '520px',
+                  margin: '0 auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px',
+                  boxShadow: '0 10px 25px -5px rgba(39, 175, 96, 0.4)'
+                }}
+                className="hover:opacity-95 transition-all active:scale-95 cursor-pointer"
               >
-                Não obrigado, prefiro fazer o Projeto 21 Dias sozinho sem o acompanhamento individual.
+                <span>Sim, eu aceito essa oferta especial!</span>
               </button>
+
+              <div
+                id="kiwify-upsell-cancel-trigger-vOKFrFs"
+                onClick={onDeclineClick}
+                style={{
+                  marginTop: '1.25rem',
+                  cursor: 'pointer',
+                  fontSize: '15px',
+                  textDecoration: 'underline',
+                  fontFamily: 'sans-serif'
+                }}
+                className="text-slate-400 hover:text-slate-300 transition-colors inline-block"
+              >
+                Não, eu gostaria de recusar essa oferta
+              </div>
             </div>
           </div>
 

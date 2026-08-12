@@ -42,19 +42,12 @@ export const TopUrgencyBanner: React.FC<Props> = ({ timeLeftSeconds, onOpenCheck
               </strong>
             </div>
 
-            <div className="hidden md:flex items-center gap-1.5 bg-rose-950/40 px-2.5 py-1 rounded-sm border border-rose-500/30 text-rose-300">
+            <div className="flex items-center gap-1.5 bg-rose-950/40 px-2.5 py-1 rounded-sm border border-rose-500/30 text-rose-300">
               <Flame className="w-3.5 h-3.5 text-rose-500" />
               <span className="text-[10px] uppercase tracking-widest font-semibold">
                 [ APENAS {spotsLeft} VAGAS RESTANTES ]
               </span>
             </div>
-
-            <button
-              onClick={onOpenCheckout}
-              className="bg-rose-600 hover:bg-rose-700 text-white font-bold px-3.5 py-1.5 rounded-sm text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 shrink-0"
-            >
-              Garantir Vaga
-            </button>
           </div>
 
         </div>

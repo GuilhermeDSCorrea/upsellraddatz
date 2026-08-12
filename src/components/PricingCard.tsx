@@ -95,32 +95,52 @@ export const PricingCard: React.FC<Props> = ({ timeLeftSeconds, onOpenCheckout, 
               </div>
             </div>
 
-            {/* Primary Action & Kiwify Integration */}
+            {/* Primary Action */}
             <div className="pt-2">
-              <div style={{ textAlign: 'center' }} id="kiwify-upsell-vOKFrFs" data-upsell-url="" data-downsell-url="">
-                <button
-                  id="kiwify-upsell-trigger-vOKFrFs"
-                  onClick={onOpenCheckout}
-                  className="w-full bg-rose-600 hover:bg-rose-700 text-white font-bold text-sm sm:text-base py-4 px-6 rounded-sm shadow-2xl uppercase tracking-widest transition-all active:scale-95 flex items-center justify-center gap-3 border border-rose-500/30 cursor-pointer"
-                >
-                  <Lock className="w-4 h-4 fill-white" />
-                  <span>Sim! Quero Minha Consulta por R$ 89,90</span>
-                  <ArrowRight className="w-5 h-5" />
-                </button>
+              <button
+                onClick={onOpenCheckout}
+                style={{
+                  backgroundColor: '#27AF60',
+                  padding: '14px 20px',
+                  cursor: 'pointer',
+                  color: '#FFFFFF',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  border: '1px solid #27AF60',
+                  fontSize: '20px',
+                  width: '100%',
+                  maxWidth: '520px',
+                  margin: '0 auto',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '10px',
+                  boxShadow: '0 10px 25px -5px rgba(39, 175, 96, 0.4)'
+                }}
+                className="hover:opacity-95 transition-all active:scale-95"
+              >
+                <Lock className="w-5 h-5 text-white fill-white" />
+                <span>Sim, eu aceito essa oferta especial!</span>
+              </button>
 
-                {/* Guarantee Badge */}
-                <div className="pt-3 flex items-center justify-center gap-2 text-xs text-slate-400 font-light">
-                  <ShieldCheck className="w-4 h-4 text-rose-500 shrink-0" />
-                  <span>Garantia de Satisfação de 7 Dias • Pagamento Seguro</span>
-                </div>
+              {/* Guarantee Badge */}
+              <div className="pt-4 flex items-center justify-center gap-2 text-xs text-slate-400 font-light">
+                <ShieldCheck className="w-4 h-4 text-[#27AF60] shrink-0" />
+                <span>Garantia de Satisfação de 7 Dias • Pagamento Seguro Kiwify</span>
+              </div>
 
-                <div
-                  id="kiwify-upsell-cancel-trigger-vOKFrFs"
-                  onClick={onDeclineClick}
-                  className="text-xs text-slate-500 hover:text-slate-400 underline transition-colors cursor-pointer pt-3 uppercase tracking-wider text-[11px]"
-                >
-                  Não, prefiro abrir mão do desconto e continuar no Projeto 21 Dias sem acompanhamento individual.
-                </div>
+              <div
+                onClick={onDeclineClick}
+                style={{
+                  marginTop: '1rem',
+                  cursor: 'pointer',
+                  fontSize: '15px',
+                  textDecoration: 'underline',
+                  fontFamily: 'sans-serif'
+                }}
+                className="text-slate-400 hover:text-slate-300 transition-colors"
+              >
+                Não, eu gostaria de recusar essa oferta
               </div>
             </div>
 
