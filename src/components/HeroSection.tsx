@@ -132,7 +132,6 @@ export const HeroSection: React.FC<Props> = ({ onOpenCheckout, onDeclineClick })
             <div style={{ textAlign: 'center' }} id="kiwify-upsell-vOKFrFs" data-upsell-url="" data-downsell-url="">
               <button
                 id="kiwify-upsell-trigger-vOKFrFs"
-                onClick={onOpenCheckout}
                 style={{
                   backgroundColor: '#27AF60',
                   padding: '16px 28px',
@@ -158,7 +157,6 @@ export const HeroSection: React.FC<Props> = ({ onOpenCheckout, onDeclineClick })
 
               <div
                 id="kiwify-upsell-cancel-trigger-vOKFrFs"
-                onClick={onDeclineClick}
                 style={{
                   marginTop: '1.25rem',
                   cursor: 'pointer',
