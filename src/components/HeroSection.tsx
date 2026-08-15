@@ -145,38 +145,29 @@ export const HeroSection: React.FC<Props> = ({ onOpenCheckout, onDeclineClick })
               <button
                 id="kiwify-upsell-trigger-vOKFrFs"
                 style={{
-                  backgroundColor: '#27AF60',
-                  padding: '16px 28px',
+                  backgroundColor: '#F39C19',
+                  padding: '12px 16px',
                   cursor: 'pointer',
                   color: '#FFFFFF',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   borderRadius: '4px',
-                  border: '1px solid #27AF60',
-                  fontSize: '20px',
-                  width: '100%',
-                  maxWidth: '520px',
-                  margin: '0 auto',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '10px',
-                  boxShadow: '0 10px 25px -5px rgba(39, 175, 96, 0.4)'
+                  border: '1px solid #F39C19',
+                  fontSize: '20px'
                 }}
-                className="hover:opacity-95 transition-all active:scale-95 cursor-pointer"
+                className="hover:opacity-95 transition-all active:scale-95"
               >
-                <span>Sim, eu aceito essa oferta especial!</span>
+                Sim, eu aceito essa oferta especial!
               </button>
-
               <div
                 id="kiwify-upsell-cancel-trigger-vOKFrFs"
                 style={{
-                  marginTop: '1.25rem',
+                  marginTop: '1rem',
                   cursor: 'pointer',
-                  fontSize: '15px',
+                  fontSize: '16px',
                   textDecoration: 'underline',
                   fontFamily: 'sans-serif'
                 }}
-                className="text-slate-400 hover:text-slate-200 transition-colors inline-block"
+                className="text-slate-300 hover:text-white"
               >
                 Não, eu gostaria de recusar essa oferta
               </div>
