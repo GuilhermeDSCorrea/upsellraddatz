@@ -1,6 +1,5 @@
 import React from 'react';
-import { LUCCAS_PHOTO_PATH, FALLBACK_LUCCAS_PHOTO } from '../data/upsellData';
-import { Award, Heart, Users } from 'lucide-react';
+import { Award, Heart, Users, ShieldCheck, UserCheck, Stethoscope, CheckCircle2 } from 'lucide-react';
 
 interface Props {
   onOpenCheckout: () => void;
@@ -14,26 +13,34 @@ export const AuthoritySection: React.FC<Props> = () => {
         {/* Nutritionist Bio Card */}
         <div className="bg-[#0c1833] border border-blue-900/40 rounded-sm p-6 sm:p-10 shadow-2xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           
-          {/* Photo */}
+          {/* Authority Emblem / Credential Box (No images) */}
           <div className="md:col-span-5 text-center relative">
-            <div className="relative inline-block group">
-              <img
-                src={LUCCAS_PHOTO_PATH}
-                alt="Nutricionista Luccas Raddatz"
-                className="relative w-64 h-64 sm:w-72 sm:h-72 object-cover rounded-sm border border-blue-500/40 shadow-2xl mx-auto bg-blue-950"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  if (target.src !== FALLBACK_LUCCAS_PHOTO) {
-                    target.src = FALLBACK_LUCCAS_PHOTO;
-                  }
-                }}
-              />
+            <div className="bg-gradient-to-b from-[#0e1e40] to-[#070e1e] border border-blue-800/40 rounded-sm p-8 shadow-2xl space-y-4">
+              <div className="w-20 h-20 bg-blue-950/80 border-2 border-blue-500/40 rounded-full flex items-center justify-center mx-auto text-sky-400 shadow-inner">
+                <UserCheck className="w-10 h-10" />
+              </div>
+
+              <div>
+                <h3 className="text-xl font-serif font-bold text-white">Luccas Raddatz</h3>
+                <p className="text-xs text-sky-400 font-semibold uppercase tracking-wider mt-0.5">Nutricionista Especialista em Emagrecimento</p>
+                <p className="text-[11px] text-slate-400 font-mono mt-1">CRN Ativo e Habilitado</p>
+              </div>
+
+              <div className="pt-3 border-t border-blue-900/40 grid grid-cols-2 gap-2 text-left text-xs">
+                <div className="bg-[#060d1d] p-2 rounded-sm border border-blue-900/30">
+                  <span className="text-[10px] text-slate-400 block uppercase">Especialidade</span>
+                  <span className="text-[11px] font-bold text-sky-400">Emagrecimento</span>
+                </div>
+                <div className="bg-[#060d1d] p-2 rounded-sm border border-blue-900/30">
+                  <span className="text-[10px] text-slate-400 block uppercase">Protocolo</span>
+                  <span className="text-[11px] font-bold text-sky-400">21 Dias VIP</span>
+                </div>
+              </div>
             </div>
             
             <div className="mt-4 inline-flex items-center gap-1.5 bg-blue-950/60 border border-blue-500/30 px-3 py-1 rounded-sm text-[10px] font-bold text-sky-400 uppercase tracking-wider">
-              <Award className="w-3.5 h-3.5 text-sky-400" />
-              <span>CRN Ativo & Cadastrado</span>
+              <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
+              <span>Profissional Certificado</span>
             </div>
           </div>
 
@@ -47,7 +54,7 @@ export const AuthoritySection: React.FC<Props> = () => {
                 Nutricionista Luccas Raddatz
               </h2>
               <p className="text-slate-300 text-xs uppercase tracking-wider font-light">
-                Especialista em Recomposição Corporal & Aceleração Metabólica
+                Especialista em Emagrecimento Acelerado & Recomposição Corporal
               </p>
             </div>
 

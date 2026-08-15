@@ -1,10 +1,5 @@
 import { Testimonial, BonusItem, TimeSlot, FAQItem, SocialProofNotification } from '../types';
 
-export const HERO_IMAGE_PATH = '/images/upsell_consultation_hero_1786565128197.jpg';
-export const LUCCAS_PHOTO_PATH = '/images/luccas_raddatz_photo_1786565117788.jpg';
-export const FALLBACK_HERO_IMAGE = 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1000&auto=format&fit=crop&q=80';
-export const FALLBACK_LUCCAS_PHOTO = 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&auto=format&fit=crop&q=80';
-
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
@@ -14,9 +9,7 @@ export const TESTIMONIALS: Testimonial[] = [
     weightLost: '-9.4 kg',
     days: 21,
     comment: 'Eu tentei o projeto em grupo 2 vezes e empaquei no 5º dia por causa da minha rotina corrida. Na consulta individual, o Luccas adaptou a dieta exatamente para meus horários de plantão. Perdi 9,4kg sem passar fome!',
-    beforeImg: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=80',
-    highlight: 'Acelerou o metabolismo em 3x'
+    highlight: 'Emagrecimento com aceleração metabólica'
   },
   {
     id: '2',
@@ -25,10 +18,8 @@ export const TESTIMONIALS: Testimonial[] = [
     city: 'Curitiba, PR',
     weightLost: '-12.1 kg',
     days: 21,
-    comment: 'Tinha gordura no fígado e muita retenção abdominal. O Luccas analisou meus exames na consulta e trocou 3 alimentos mágicos que desincharem minha barriga em 48h. Vale 100x mais do que R$ 89,90!',
-    beforeImg: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&auto=format&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=80',
-    highlight: 'Ajuste de exames de sangue e fígado'
+    comment: 'Tinha gordura no fígado e muita retenção abdominal. O Luccas analisou meus exames na consulta e trocou 3 alimentos que desincharem minha barriga em 48h. Vale 100x mais do que R$ 89,90!',
+    highlight: 'Ajuste de exames e queima de gordura'
   },
   {
     id: '3',
@@ -38,9 +29,7 @@ export const TESTIMONIALS: Testimonial[] = [
     weightLost: '-7.8 kg',
     days: 21,
     comment: 'O suporte do Luccas no WhatsApp tirou todas as minhas dúvidas quando saí pra jantar fora no fim de semana. Foi o acompanhamento mais atencioso que já tive!',
-    beforeImg: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&auto=format&fit=crop&q=80',
-    afterImg: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=500&auto=format&fit=crop&q=80',
-    highlight: 'Zero efeito sanfona'
+    highlight: 'Zero efeito sanfona e perda de gordura'
   }
 ];
 
@@ -120,8 +109,8 @@ export const FAQS: FAQItem[] = [
 ];
 
 export const SOCIAL_PROOF_NOTIFICATIONS: SocialProofNotification[] = [
-  { id: 'n1', name: 'Fernanda Rocha', city: 'São Paulo - SP', timeAgo: 'há 1 minuto', avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80' },
-  { id: 'n2', name: 'Marcos Vinícius', city: 'Rio de Janeiro - RJ', timeAgo: 'há 3 minutos', avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80' },
-  { id: 'n3', name: 'Beatriz Alcantara', city: 'Campinas - SP', timeAgo: 'há 5 minutos', avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80' },
-  { id: 'n4', name: 'Gustavo Santos', city: 'Porto Alegre - RS', timeAgo: 'há 8 minutos', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80' },
+  { id: 'n1', name: 'Fernanda Rocha', city: 'São Paulo - SP', timeAgo: 'há 1 minuto' },
+  { id: 'n2', name: 'Marcos Vinícius', city: 'Rio de Janeiro - RJ', timeAgo: 'há 3 minutos' },
+  { id: 'n3', name: 'Beatriz Alcantara', city: 'Campinas - SP', timeAgo: 'há 5 minutos' },
+  { id: 'n4', name: 'Gustavo Santos', city: 'Porto Alegre - RS', timeAgo: 'há 8 minutos' },
 ];

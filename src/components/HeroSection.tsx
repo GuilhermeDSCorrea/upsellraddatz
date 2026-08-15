@@ -1,6 +1,5 @@
 import React from 'react';
-import { HERO_IMAGE_PATH, LUCCAS_PHOTO_PATH, FALLBACK_HERO_IMAGE, FALLBACK_LUCCAS_PHOTO } from '../data/upsellData';
-import { CheckCircle2, ShieldCheck, Zap, ArrowRight, Star, Clock } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Zap, ArrowRight, Star, Clock, UserCheck, Award, Sparkles } from 'lucide-react';
 
 interface Props {
   onOpenCheckout: () => void;
@@ -52,46 +51,47 @@ export const HeroSection: React.FC<Props> = ({ onOpenCheckout, onDeclineClick })
           
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
-            {/* Left Image Showcase */}
-            <div className="md:col-span-5 relative group rounded-sm overflow-hidden border border-blue-800/30 shadow-2xl bg-[#070e1e]">
-              <img
-                src={HERO_IMAGE_PATH}
-                alt="Consulta e Plano Alimentar Individual Luccas Raddatz"
-                className="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
-                referrerPolicy="no-referrer"
-                onError={(e) => {
-                  const target = e.currentTarget;
-                  if (target.src !== FALLBACK_HERO_IMAGE) {
-                    target.src = FALLBACK_HERO_IMAGE;
-                  }
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#060d1d] via-transparent to-transparent opacity-85" />
+            {/* Left Overview Showcase Card (No images) */}
+            <div className="md:col-span-5 relative rounded-sm p-6 border border-blue-800/40 shadow-2xl bg-gradient-to-b from-[#0e1e40] to-[#070e1e] space-y-4">
               
-              {/* Overlaid Badges */}
-              <div className="absolute top-3 left-3 bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-sm flex items-center gap-1 shadow-md">
-                <Zap className="w-3.5 h-3.5 text-white fill-white" />
-                Vaga VIP Online
+              <div className="flex items-center justify-between">
+                <div className="bg-blue-600 text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-sm flex items-center gap-1 shadow-md">
+                  <Zap className="w-3.5 h-3.5 text-white fill-white" />
+                  Vaga VIP Online
+                </div>
+                <span className="text-[11px] font-mono text-sky-400 font-bold">21 DIAS VIP</span>
               </div>
 
-              {/* Nutritionist Floating Tag */}
-              <div className="absolute bottom-3 left-3 right-3 bg-[#060d1d]/95 border border-blue-900/40 p-2.5 rounded-sm flex items-center gap-3 backdrop-blur-sm">
-                <img
-                  src={LUCCAS_PHOTO_PATH}
-                  alt="Luccas Raddatz CRN"
-                  className="w-10 h-10 rounded-full object-cover border border-blue-500/60 shrink-0 bg-blue-950"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    if (target.src !== FALLBACK_LUCCAS_PHOTO) {
-                      target.src = FALLBACK_LUCCAS_PHOTO;
-                    }
-                  }}
-                />
-                <div className="text-xs">
-                  <p className="font-serif italic text-white font-bold text-sm">Luccas Raddatz</p>
-                  <p className="text-sky-400 text-[10px] uppercase tracking-wider">Nutricionista CRN Ativo</p>
+              <div className="space-y-2 pt-2 border-t border-blue-900/40">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-sm bg-blue-950 border border-blue-500/40 flex items-center justify-center text-sky-400 shrink-0">
+                    <UserCheck className="w-6 h-6" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif font-bold text-white text-base">Nutr. Luccas Raddatz</h3>
+                    <p className="text-[10px] text-sky-400 uppercase tracking-wider font-medium">CRN Ativo • Especialista</p>
+                  </div>
                 </div>
+              </div>
+
+              <div className="bg-[#060d1d]/80 border border-blue-900/40 p-3 rounded-sm space-y-1.5 text-xs">
+                <div className="flex items-center justify-between text-slate-300">
+                  <span className="text-[11px] font-light">Atendimento</span>
+                  <span className="font-bold text-white text-[11px]">100% Individual</span>
+                </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span className="text-[11px] font-light">Plano Prescrito</span>
+                  <span className="font-bold text-sky-400 text-[11px]">Personalizado</span>
+                </div>
+                <div className="flex items-center justify-between text-slate-300">
+                  <span className="text-[11px] font-light">Suporte WhatsApp</span>
+                  <span className="font-bold text-emerald-400 text-[11px]">Direto e Ilimitado</span>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-1.5 text-[10px] text-slate-400 uppercase tracking-wider justify-center pt-1">
+                <Award className="w-3.5 h-3.5 text-sky-400" />
+                <span>+3.800 pacientes transformados</span>
               </div>
             </div>
 

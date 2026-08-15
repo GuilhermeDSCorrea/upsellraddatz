@@ -6,8 +6,6 @@ export interface Testimonial {
   weightLost: string;
   days: number;
   comment: string;
-  beforeImg: string;
-  afterImg: string;
   highlight: string;
 }
 
@@ -37,7 +35,6 @@ export interface SocialProofNotification {
   name: string;
   city: string;
   timeAgo: string;
-  avatar: string;
 }
 
 export type PaymentMethod = 'pix' | 'credit_card' | 'boleto';

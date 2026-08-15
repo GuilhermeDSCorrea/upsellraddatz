@@ -38,15 +38,9 @@ export const SocialProofPopups: React.FC = () => {
   return (
     <div className="fixed bottom-4 left-4 z-50 max-w-sm bg-[#0c1833] border border-blue-900/40 text-white rounded-sm p-3 shadow-2xl backdrop-blur-md transition-all duration-500 animate-slide-up flex items-center gap-3">
       <div className="relative shrink-0">
-        <img
-          src={currentNotification.avatar}
-          alt={currentNotification.name}
-          className="w-10 h-10 rounded-sm object-cover border border-blue-500/40 bg-blue-950"
-          referrerPolicy="no-referrer"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
+        <div className="w-10 h-10 rounded-sm bg-blue-950 border border-blue-500/40 flex items-center justify-center text-sky-400 font-bold text-xs uppercase shadow-sm">
+          {currentNotification.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+        </div>
         <div className="absolute -bottom-1 -right-1 bg-[#060d1d] text-sky-400 p-0.5 rounded-sm border border-blue-500/30">
           <CheckCircle2 className="w-3 h-3" />
         </div>

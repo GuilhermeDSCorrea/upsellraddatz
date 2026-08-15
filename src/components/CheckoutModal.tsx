@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
-import { TIME_SLOTS, LUCCAS_PHOTO_PATH, FALLBACK_LUCCAS_PHOTO } from '../data/upsellData';
+import { TIME_SLOTS } from '../data/upsellData';
 import { PaymentMethod } from '../types';
-import { X, Calendar, CreditCard, ShieldCheck, CheckCircle2, QrCode, Lock, ArrowRight, Copy, PhoneCall } from 'lucide-react';
+import { X, Calendar, CreditCard, ShieldCheck, CheckCircle2, QrCode, Lock, ArrowRight, Copy, PhoneCall, UserCheck } from 'lucide-react';
 
 interface Props {
   isOpen: boolean;
@@ -86,18 +86,9 @@ export const CheckoutModal: React.FC<Props> = ({ isOpen, onClose }) => {
             <form onSubmit={handleNextToPayment} className="space-y-5">
               
               <div className="bg-[#070e1e] p-3.5 rounded-sm border border-blue-900/30 flex items-center gap-3">
-                <img
-                  src={LUCCAS_PHOTO_PATH}
-                  alt="Luccas Raddatz"
-                  className="w-12 h-12 rounded-sm object-cover border border-blue-500/40 shrink-0 bg-blue-950"
-                  referrerPolicy="no-referrer"
-                  onError={(e) => {
-                    const target = e.currentTarget;
-                    if (target.src !== FALLBACK_LUCCAS_PHOTO) {
-                      target.src = FALLBACK_LUCCAS_PHOTO;
-                    }
-                  }}
-                />
+                <div className="w-12 h-12 rounded-sm bg-blue-950 border border-blue-500/40 flex items-center justify-center text-sky-400 shrink-0">
+                  <UserCheck className="w-6 h-6" />
+                </div>
                 <div className="text-xs space-y-0.5">
                   <p className="font-serif font-bold text-white text-sm">Consulta Individual + Plano VIP</p>
                   <p className="text-slate-300 font-light">Com Nutricionista Luccas Raddatz</p>
