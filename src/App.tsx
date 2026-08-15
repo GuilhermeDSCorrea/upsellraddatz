@@ -53,7 +53,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-slate-100 font-sans selection:bg-rose-500 selection:text-white">
+    <div className="min-h-screen bg-[#060d1d] text-slate-100 font-sans selection:bg-blue-600 selection:text-white">
       
       {/* 1. Top Urgency & Countdown Bar */}
       <TopUrgencyBanner

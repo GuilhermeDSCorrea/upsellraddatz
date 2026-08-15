@@ -16,8 +16,8 @@ export const TopUrgencyBanner: React.FC<Props> = ({ timeLeftSeconds, onOpenCheck
   };
 
   return (
-    <div className="sticky top-0 z-40 bg-[#050505] text-white border-b border-white/10 shadow-2xl backdrop-blur-md">
-      <div className="bg-rose-600 text-white text-center py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-2">
+    <div className="sticky top-0 z-40 bg-[#060d1d] text-white border-b border-blue-900/30 shadow-2xl backdrop-blur-md">
+      <div className="bg-blue-600 text-white text-center py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-2">
         <AlertTriangle className="w-3.5 h-3.5 text-white shrink-0 animate-pulse" />
         <span>Oportunidade Única: Oferta expira em {formatTime(timeLeftSeconds)}</span>
       </div>
@@ -27,23 +27,23 @@ export const TopUrgencyBanner: React.FC<Props> = ({ timeLeftSeconds, onOpenCheck
           
           {/* Left Title */}
           <div className="flex items-center gap-3">
-            <span className="text-rose-500 font-bold text-xs tracking-widest uppercase">Oferta Especial Exclusiva</span>
+            <span className="text-sky-400 font-bold text-xs tracking-widest uppercase">Oferta Especial Exclusiva</span>
             <span className="text-white/20">|</span>
-            <span className="text-slate-300 font-serif italic text-sm">Luccas Raddatz Nutrição</span>
+            <span className="text-slate-200 font-serif italic text-sm">Luccas Raddatz Nutrição</span>
           </div>
 
           {/* Countdown & Scarcity */}
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-1.5 bg-white/5 px-3 py-1 rounded-sm border border-white/10 font-mono text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-rose-500" />
+            <div className="flex items-center gap-1.5 bg-blue-950/40 px-3 py-1 rounded-sm border border-blue-500/20 font-mono text-slate-300">
+              <Clock className="w-3.5 h-3.5 text-sky-400" />
               <span className="text-[10px] uppercase tracking-widest text-slate-400">Tempo:</span>
-              <strong className="text-rose-400 font-bold text-xs tracking-wider">
+              <strong className="text-sky-300 font-bold text-xs tracking-wider">
                 {formatTime(timeLeftSeconds)}
               </strong>
             </div>
 
-            <div className="flex items-center gap-1.5 bg-rose-950/40 px-2.5 py-1 rounded-sm border border-rose-500/30 text-rose-300">
-              <Flame className="w-3.5 h-3.5 text-rose-500" />
+            <div className="flex items-center gap-1.5 bg-blue-950/70 px-2.5 py-1 rounded-sm border border-blue-500/30 text-sky-200">
+              <Flame className="w-3.5 h-3.5 text-sky-400" />
               <span className="text-[10px] uppercase tracking-widest font-semibold">
                 [ APENAS {spotsLeft} VAGAS RESTANTES ]
               </span>

@@ -1,7 +1,9 @@
 import { Testimonial, BonusItem, TimeSlot, FAQItem, SocialProofNotification } from '../types';
 
-export const HERO_IMAGE_PATH = '/src/assets/images/upsell_consultation_hero_1786565128197.jpg';
-export const LUCCAS_PHOTO_PATH = '/src/assets/images/luccas_raddatz_photo_1786565117788.jpg';
+export const HERO_IMAGE_PATH = '/images/upsell_consultation_hero_1786565128197.jpg';
+export const LUCCAS_PHOTO_PATH = '/images/luccas_raddatz_photo_1786565117788.jpg';
+export const FALLBACK_HERO_IMAGE = 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1000&auto=format&fit=crop&q=80';
+export const FALLBACK_LUCCAS_PHOTO = 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=800&auto=format&fit=crop&q=80';
 
 export const TESTIMONIALS: Testimonial[] = [
   {
